@@ -8,9 +8,9 @@ using System.Runtime.InteropServices;
 [assembly: AssemblyTitle("tmpCodeTable")]
 [assembly: AssemblyDescription("")]
 [assembly: AssemblyConfiguration("")]
-[assembly: AssemblyCompany("WildSoft Netbook")]
+[assembly: AssemblyCompany("")]
 [assembly: AssemblyProduct("tmpCodeTable")]
-[assembly: AssemblyCopyright("Copyright © WildSoft Netbook 2018")]
+[assembly: AssemblyCopyright("")]
 [assembly: AssemblyTrademark("")]
 [assembly: AssemblyCulture("")]
 

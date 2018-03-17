@@ -29,7 +29,7 @@
         private void InitializeComponent()
         {
             this.txtCode = new System.Windows.Forms.TextBox();
-            this.txtChar = new System.Windows.Forms.TextBox();
+            this.txtChar = new System.Windows.Forms.RichTextBox();
             this.SuspendLayout();
             // 
             // txtCode
@@ -48,20 +48,27 @@
             // 
             this.txtChar.BackColor = System.Drawing.SystemColors.Window;
             this.txtChar.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.txtChar.DetectUrls = false;
             this.txtChar.Location = new System.Drawing.Point(3, 19);
+            this.txtChar.MaxLength = 1;
+            this.txtChar.Multiline = false;
             this.txtChar.Name = "txtChar";
             this.txtChar.ReadOnly = true;
+            this.txtChar.ScrollBars = System.Windows.Forms.RichTextBoxScrollBars.None;
             this.txtChar.Size = new System.Drawing.Size(45, 13);
             this.txtChar.TabIndex = 1;
-            this.txtChar.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.txtChar.Text = "";
+            this.txtChar.WordWrap = false;
+            this.txtChar.ContentsResized += new System.Windows.Forms.ContentsResizedEventHandler(this.txtChar_ContentsResized);
             // 
             // TableItem
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.AutoSize = true;
-            this.Controls.Add(this.txtChar);
+            this.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
             this.Controls.Add(this.txtCode);
+            this.Controls.Add(this.txtChar);
             this.Name = "TableItem";
             this.Size = new System.Drawing.Size(51, 35);
             this.ResumeLayout(false);
@@ -72,6 +79,6 @@
         #endregion
 
         private System.Windows.Forms.TextBox txtCode;
-        private System.Windows.Forms.TextBox txtChar;
+        private System.Windows.Forms.RichTextBox txtChar;
     }
 }

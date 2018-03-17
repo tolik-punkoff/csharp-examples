@@ -12,6 +12,8 @@
     <AssemblyName>tmpCodeTable</AssemblyName>
     <TargetFrameworkVersion>v2.0</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
+    <TargetFrameworkSubset>
+    </TargetFrameworkSubset>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
     <DebugSymbols>true</DebugSymbols>
@@ -39,11 +41,20 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="CompFontHelper.cs" />
+    <Compile Include="EncodingHelper.cs" />
+    <Compile Include="FileFont.cs" />
     <Compile Include="Form1.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="Form1.Designer.cs">
       <DependentUpon>Form1.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmCompFont.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmCompFont.Designer.cs">
+      <DependentUpon>frmCompFont.cs</DependentUpon>
     </Compile>
     <Compile Include="frmEncInfo.cs">
       <SubType>Form</SubType>
@@ -51,13 +62,44 @@
     <Compile Include="frmEncInfo.Designer.cs">
       <DependentUpon>frmEncInfo.cs</DependentUpon>
     </Compile>
+    <Compile Include="frmFontSettings.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmFontSettings.Designer.cs">
+      <DependentUpon>frmFontSettings.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmHexValue.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmHexValue.Designer.cs">
+      <DependentUpon>frmHexValue.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmLoading.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmLoading.Designer.cs">
+      <DependentUpon>frmLoading.cs</DependentUpon>
+    </Compile>
+    <Compile Include="GlobalFontCollection.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <EmbeddedResource Include="Form1.resx">
       <DependentUpon>Form1.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="frmCompFont.resx">
+      <DependentUpon>frmCompFont.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="frmEncInfo.resx">
       <DependentUpon>frmEncInfo.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmFontSettings.resx">
+      <DependentUpon>frmFontSettings.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmHexValue.resx">
+      <DependentUpon>frmHexValue.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmLoading.resx">
+      <DependentUpon>frmLoading.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
@@ -70,6 +112,7 @@
     <Compile Include="Properties\Resources.Designer.cs">
       <AutoGen>True</AutoGen>
       <DependentUpon>Resources.resx</DependentUpon>
+      <DesignTime>True</DesignTime>
     </Compile>
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
@@ -86,6 +129,11 @@
     <Compile Include="TableItem.Designer.cs">
       <DependentUpon>TableItem.cs</DependentUpon>
     </Compile>
+    <Compile Include="UnicodeBlock.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="app.config" />
+    <None Include="Resources\Blocks.txt" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 

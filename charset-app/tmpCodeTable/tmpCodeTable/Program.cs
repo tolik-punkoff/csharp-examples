@@ -13,8 +13,9 @@ namespace tmpCodeTable
         static void Main()
         {
             Application.EnableVisualStyles();
-            Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new frmMain());
+            Application.SetCompatibleTextRenderingDefault(false);            
+            Application.Run(new frmLoading());
+            
         }
     }
 }
