@@ -14,3 +14,7 @@ read-write-file - simple class for read and write file with backup
 bin-oct-hex-dec - demonstration of the transformation of numbers 
 		  into the number systems with bases 
 		  2, 8, 10, 16, using the standard class Convert
+
+charset-app - charmap application example for single-byte encodings and Unicode
+
+surrogate-pair-example - surrogate pair char displaying example
