@@ -18,3 +18,5 @@ bin-oct-hex-dec - demonstration of the transformation of numbers
 charset-app - charmap application example for single-byte encodings and Unicode
 
 surrogate-pair-example - surrogate pair char displaying example
+
+ungzip - detecting and unpacking gzip-archive (.NET 2.0)
