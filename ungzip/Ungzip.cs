@@ -11,17 +11,22 @@ namespace tmpAnalyseRP5
         public string ErrorMessage { get; private set; }
         public bool IsGZip(string filename)
         {
-            byte[] buf = null;
+            int signlen = 4;
+            int count = 0;
+            byte[] buf = new byte[signlen];
+            FileStream readStream = null;
             try
             {
-                buf = File.ReadAllBytes(filename);
+                readStream = new FileStream(filename, FileMode.Open);
+                count = readStream.Read(buf, 0, signlen);
             }
             catch
             {
                 return false;
             }
+            readStream.Close();
 
-            if (buf.Length < 4) return false;
+            if (count < 4) return false;
 
             if ((buf[0] == 0x1F) && (buf[1] == 0x8B) &&
                 (buf[2] == 0x08) && (buf[3] == 0x00))
