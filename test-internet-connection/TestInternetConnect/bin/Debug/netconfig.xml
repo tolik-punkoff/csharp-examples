@@ -1,0 +1,13 @@
+<?xml version="1.0" standalone="yes"?>
+<NewDataSet>
+  <NetSettings>
+    <ConnectionType>0</ConnectionType>
+    <ProxyAddress>111</ProxyAddress>
+    <ProxyPort>2222</ProxyPort>
+    <ProxyUser>3333</ProxyUser>
+    <ProxyPassword>AQAAANCMnd8BFdERjHoAwE/Cl+sBAAAA/R10iLZAjUuwJE/bEkzADAQAAAACAAAAAAADZgAAqAAAABAAAACAHW055gzGaSENOka73MIkAAAAAASAAACgAAAAEAAAACvDGbJN4I1MD2AmOoiTf/UIAAAANPdqqjX/wlwUAAAA2fAMgwMyrTouLmmXpBpgwx8OVhc=</ProxyPassword>
+    <SavePassword>true</SavePassword>
+    <ConnectionTimeout>0</ConnectionTimeout>
+    <ShowChars>true</ShowChars>
+  </NetSettings>
+</NewDataSet>

@@ -20,3 +20,5 @@ charset-app - charmap application example for single-byte encodings and Unicode
 surrogate-pair-example - surrogate pair char displaying example
 
 ungzip - detecting and unpacking gzip-archive (.NET 2.0)
+
+test-internet-connection - Test internet connection example

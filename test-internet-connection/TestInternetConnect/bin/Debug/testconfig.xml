@@ -1,0 +1,7 @@
+<?xml version="1.0" standalone="yes"?>
+<NewDataSet>
+  <TestSettings>
+    <PauseTime>5</PauseTime>
+    <URL>http://google.com</URL>
+  </TestSettings>
+</NewDataSet>
