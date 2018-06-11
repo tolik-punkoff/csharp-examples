@@ -1,6 +1,8 @@
 # csharp-examples
 different small examples on C #
 
+about-demo - about window example
+
 insert-replace-textbox - insert/replace symbols in textbox after Ins key press
 
 noborder-form-move  - move form with FormBorderStyle == None  
