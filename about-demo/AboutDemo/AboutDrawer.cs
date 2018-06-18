@@ -309,12 +309,13 @@ namespace AboutDemo
         private bool AddScene(string[] Command)
         {
             //добавляет "сцены"
-
+            bool prevadd = false;
             if (tmpScene.StringsCount != 0) //если в сцене есть строки
             {
                 //tmpScene.StringsHeight = tmpScene.StringsCount * SpaceHeight;
                 //добавляем предыдущую сцену в список
                 Scenes.Add(tmpScene);
+                prevadd = true;
             }
 
             //разбираем команду и создаем следующую сцену
@@ -372,8 +373,11 @@ namespace AboutDemo
             tmpScene.PauseTimeout = pause_timeout; //устанавливаем параметры
             tmpScene.DrawTimeout = draw_timeout;
             tmpScene.BackColor = back_color;
-            
-            SceneNumber++; //номер для следующей сцены            
+
+            if (prevadd) //предыдущая сцена была добавлена
+            {
+                SceneNumber++; //инкреминируем номер для следующей сцены
+            }
 
             return true;
         }
@@ -488,11 +492,16 @@ namespace AboutDemo
         {
             graph.Clear(back_color);
             int sidx = GetStartIndex(SceneNumber);
+            /*if (sidx == -1) //в сцене нет строк
+            {
+                //пускаем следующую
+                NextScene();
+            }*/
             int nexty = teky;
 
             //рисуем все строчки сцены
             for (int i = 0; i < Scenes[SceneNumber].StringsCount; i++)
-            {
+            {                
                 Font fnt = GetFont(Strings[i+sidx].FontName);
                 int pixlen = graph.MeasureString(Strings[i+sidx].Text, fnt).ToSize().Width;
                 int height = graph.MeasureString(Strings[i + sidx].Text, fnt).ToSize().Height;
@@ -518,34 +527,39 @@ namespace AboutDemo
 
             if (teky <= Scenes[SceneNumber].StringsHeight*(-1)) //конец сцены
             {
-                //запускаем следующую
-                SceneNumber++;
-                if (SceneNumber >= Scenes.Count) SceneNumber = 0;
-
-                if (Scenes[SceneNumber].DrawTimeout <= 0)
-                {
-                    tmrDraw.Interval = DefaultDrawTimeout;
-                }
-                else
-                {
-                    tmrDraw.Interval = Scenes[SceneNumber].DrawTimeout;
-                }
-
-                back_color = Scenes[SceneNumber].BackColor;
-                
-                teky = starty;
-
-                if (SceneChanged != null)
-                {
-                    SceneChangedEventArgs evarg = new SceneChangedEventArgs();
-                    evarg.BackColor = back_color;
-                    evarg.SceneNumber = SceneNumber;
-                    SceneChanged(this, evarg);
-                }
+                NextScene();
             }
 
             pctDraw.Image = (Image)view;
             teky--;
+        }
+
+        private void NextScene()
+        {
+            //запускаем следующую сцену
+            SceneNumber++;
+            if (SceneNumber >= Scenes.Count) SceneNumber = 0;
+
+            if (Scenes[SceneNumber].DrawTimeout <= 0)
+            {
+                tmrDraw.Interval = DefaultDrawTimeout;
+            }
+            else
+            {
+                tmrDraw.Interval = Scenes[SceneNumber].DrawTimeout;
+            }
+
+            back_color = Scenes[SceneNumber].BackColor;
+
+            teky = starty;
+
+            if (SceneChanged != null)
+            {
+                SceneChangedEventArgs evarg = new SceneChangedEventArgs();
+                evarg.BackColor = back_color;
+                evarg.SceneNumber = SceneNumber;
+                SceneChanged(this, evarg);
+            }
         }
 
         private int GetStartIndex(int SceneN)

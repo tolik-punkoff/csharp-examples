@@ -18,7 +18,7 @@ addstring;D. Larin;Names
 addstring;PKMake;Names
 addstring;Художественное перепиливание;Group
 addstring;PunkArr[];Names
-addstring;Leha Silent;Slogan
+addstring;Leha Silent;Names
 addstring;NKT;Names
 addstring;Design & Idea;Group
 addstring;D. Larin;Names
