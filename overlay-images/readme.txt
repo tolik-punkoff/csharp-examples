@@ -1,0 +1,1 @@
+Images overlay and resize example (WindowsForms)
