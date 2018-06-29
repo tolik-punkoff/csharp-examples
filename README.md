@@ -29,3 +29,5 @@ dynamic-notifyicon - Creates an icon in the system tray with dynamically updated
 		     text
 
 validate-ip - Validate IP (v4) without using regular expressions
+
+overlay-images - Images overlay and resize example (WindowsForms)
