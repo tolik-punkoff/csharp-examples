@@ -28,6 +28,9 @@ test-internet-connection - Test internet connection example
 dynamic-notifyicon - Creates an icon in the system tray with dynamically updated 
 		     text
 
+dynamic-notifyicon-2 - Creates an icon in the system tray with dynamically updated 
+		     overlay images
+
 validate-ip - Validate IP (v4) without using regular expressions
 
 overlay-images - Images overlay and resize example (WindowsForms)
