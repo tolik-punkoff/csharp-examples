@@ -15,7 +15,8 @@ namespace TestAutorun
     public class Autorun
     {
         private RegistryKey MainKey = Registry.CurrentUser;
-        private string RunSubKey = @"Software\Microsoft\Windows\CurrentVersion\Run";
+        private string RunSubKey = "Software\\Microsoft\\Windows\\CurrentVersion\\Run";
+        private RegistryKey WorkKey = null;
 
         public string ValueName { get; set; }
         public string AppPath { get; set; }
@@ -29,12 +30,12 @@ namespace TestAutorun
 
         public AutorunStatus Add()
         {
-            //удаление из автозагрузки
+            //добавление в автозагрузку
 
             try
             {
                 //Пробуем открыть ключ
-                MainKey.OpenSubKey(RunSubKey);                
+                WorkKey = MainKey.OpenSubKey(RunSubKey,true);                
             }
             catch (Exception ex)
             {
@@ -45,16 +46,16 @@ namespace TestAutorun
             try
             {
                 //Добавляемся в автозагрузку
-                MainKey.SetValue(ValueName,AppPath,RegistryValueKind.String);
+                WorkKey.SetValue(ValueName,AppPath);
             }
             catch (Exception ex)
             {
                 ErrorMessage = ex.Message;
-                MainKey.Close();
+                WorkKey.Close();
                 return AutorunStatus.Error;
             }
-
-            MainKey.Close();
+            
+            WorkKey.Close();
             return AutorunStatus.Run;
         }
 
@@ -65,7 +66,7 @@ namespace TestAutorun
             try
             {
                 //Пробуем открыть ключ
-                MainKey.OpenSubKey(RunSubKey);
+                WorkKey = MainKey.OpenSubKey(RunSubKey,true);
             }
             catch (Exception ex)
             {
@@ -76,16 +77,16 @@ namespace TestAutorun
             try
             {             
                 //удаляем Value из ключа
-                MainKey.DeleteValue(ValueName);
+                WorkKey.DeleteValue(ValueName);
             }
             catch (Exception ex)
             {
                 ErrorMessage = ex.Message;
-                MainKey.Close();
+                WorkKey.Close();
                 return AutorunStatus.Error;
             }
 
-            MainKey.Close();
+            WorkKey.Close();
             return AutorunStatus.NoRun;
         }
 
@@ -97,7 +98,7 @@ namespace TestAutorun
             try
             {                
                 //Пробуем открыть ключ
-                MainKey.OpenSubKey(RunSubKey);                
+                WorkKey = MainKey.OpenSubKey(RunSubKey);                
             }
             catch (Exception ex)
             {
@@ -108,16 +109,16 @@ namespace TestAutorun
             //пробуем считать значение записи автозагрузки
             try
             {
-                ValueData = MainKey.GetValue(ValueName).ToString();
+                ValueData = WorkKey.GetValue(ValueName).ToString();
             }
             catch
             {
                 //скорее всего записи нет, мы не в автозагрузке
-                MainKey.Close();
+                WorkKey.Close();
                 return AutorunStatus.NoRun;
             }
             
-            MainKey.Close();
+            WorkKey.Close();
             //ключ есть, но путь к приложению неправильный
             if (ValueData != AppPath)
             {
