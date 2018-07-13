@@ -34,3 +34,5 @@ dynamic-notifyicon-2 - Creates an icon in the system tray with dynamically updat
 validate-ip - Validate IP (v4) without using regular expressions
 
 overlay-images - Images overlay and resize example (WindowsForms)
+
+autorun-example - Startup program from Windows Registry
