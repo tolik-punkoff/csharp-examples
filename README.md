@@ -36,3 +36,5 @@ validate-ip - Validate IP (v4) without using regular expressions
 overlay-images - Images overlay and resize example (WindowsForms)
 
 autorun-example - Startup program from Windows Registry
+
+byte-order - byte order (little-endian/big-endian) example
