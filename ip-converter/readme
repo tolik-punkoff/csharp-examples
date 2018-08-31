@@ -1,0 +1,5 @@
+Class for operations with IP-address:
+
+- Get IP-address bytes (LE and BE)
+- Convert IP-address to int and uint
+- Validate IP address

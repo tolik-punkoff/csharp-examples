@@ -38,3 +38,5 @@ overlay-images - Images overlay and resize example (WindowsForms)
 autorun-example - Startup program from Windows Registry
 
 byte-order - byte order (little-endian/big-endian) example
+
+ip-converter - Class for operations with IP-address
