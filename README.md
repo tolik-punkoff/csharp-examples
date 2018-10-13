@@ -42,3 +42,5 @@ byte-order - byte order (little-endian/big-endian) example
 ip-converter - Class for operations with IP-address
 
 spec-diaps - checks if the IP-address is in a special-use addresses diapasons.
+
+create-shortcut - Create Windows shortcut (LNK) example (with WSHShell)
