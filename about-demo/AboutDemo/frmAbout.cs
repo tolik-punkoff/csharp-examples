@@ -8,7 +8,7 @@ using System.Collections;
 using System.Windows.Forms;
 using System.Diagnostics;
 
-namespace AboutDemo
+namespace Wildsoft.About
 {
     public partial class frmAbout : Form
     {
@@ -39,7 +39,7 @@ namespace AboutDemo
             Drawer.DefaultTextColor = Color.Lime;
             Drawer.SceneChanged += new AboutDrawer.OnSceneChanged(Drawer_SceneChanged);
 
-            if (!Drawer.LoadScript(Properties.Resources.abouttest))
+            if (!Drawer.LoadScript(AboutDemo.Properties.Resources.abouttest))
             {
                 MessageBox.Show(Drawer.ErrorMessage, "Error", MessageBoxButtons.OK,
                     MessageBoxIcon.Exclamation);

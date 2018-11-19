@@ -6,7 +6,7 @@ using System.Windows.Forms;
 using System.Globalization;
 using System.IO;
 
-namespace AboutDemo
+namespace Wildsoft.About
 {
     public class SceneChangedEventArgs : EventArgs
     {
