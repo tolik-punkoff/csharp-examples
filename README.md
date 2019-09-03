@@ -46,3 +46,5 @@ spec-diaps - checks if the IP-address is in a special-use addresses diapasons.
 create-shortcut - Create Windows shortcut (LNK) example (with WSHShell)
 
 os-version - OS version, name, service pack and architecture detect example
+
+get-user-profile-folder-example - Get user profile folder (e.g. C:\users\UserName) example
