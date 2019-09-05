@@ -3,6 +3,10 @@ different small examples on C #
 
 about-demo - about window example
 
+list-view-1 - use native ListView control as log control
+
+list-view-at-log - fix jitter in ListView control as log control
+
 insert-replace-textbox - insert/replace symbols in textbox after Ins key press
 
 noborder-form-move  - move form with FormBorderStyle == None  
