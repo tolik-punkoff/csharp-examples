@@ -52,3 +52,5 @@ create-shortcut - Create Windows shortcut (LNK) example (with WSHShell)
 os-version - OS version, name, service pack and architecture detect example
 
 get-user-profile-folder-example - Get user profile folder (e.g. C:\users\UserName) example
+
+input-digit-example - Input only digid, float numbers and negative numbers in TextBox
