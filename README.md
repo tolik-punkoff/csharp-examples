@@ -5,6 +5,8 @@ about-demo - about window example
 
 hide-caret - hide caret (cursor) in TextBox example
 
+popup-form - popup form above notification area
+
 list-view-1 - use native ListView control as log control
 
 list-view-at-log - fix jitter in ListView control as log control
