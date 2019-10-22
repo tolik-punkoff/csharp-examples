@@ -3,6 +3,8 @@ different small examples on C #
 
 about-demo - about window example
 
+open-form - check if Form already open.
+
 hide-caret - hide caret (cursor) in TextBox example
 
 popup-form - popup form above notification area
