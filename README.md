@@ -5,6 +5,9 @@ about-demo - about window example
 
 open-form - check if Form already open.
 
+set-focus-or-create-form - set focus to form if form exist or create new form 
+			   if form not open
+
 hide-caret - hide caret (cursor) in TextBox example
 
 popup-form - popup form above notification area
