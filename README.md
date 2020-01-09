@@ -65,3 +65,5 @@ get-user-profile-folder-example - Get user profile folder (e.g. C:\users\UserNam
 input-digit-example - Input only digid, float numbers and negative numbers in TextBox
 
 get-cert-fingerprint - Get X.509 Certificate hash/fingerprint example
+
+self-singed-cert - Using self-singed certificate to HttpWebRequest
