@@ -69,3 +69,5 @@ get-cert-fingerprint - Get X.509 Certificate hash/fingerprint example
 self-singed-cert - Using self-signed certificate to HttpWebRequest
 
 exit-code-example - console application return custom exit code
+
+hello-world - add Hello, world example
