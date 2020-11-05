@@ -67,3 +67,5 @@ input-digit-example - Input only digid, float numbers and negative numbers in Te
 get-cert-fingerprint - Get X.509 Certificate hash/fingerprint example
 
 self-singed-cert - Using self-signed certificate to HttpWebRequest
+
+exit-code-example - console application return custom exit code
