@@ -75,3 +75,5 @@ hello-world - add Hello, world example
 fill-array - This example fills a byte array with the specified number or random numbers. Contains a FillArray class and a test program.
 
 one-sym-string - Generate one symbol string (For and StringBuilder)
+
+add-leader-zero - Add leader zero's to string representation of a number
