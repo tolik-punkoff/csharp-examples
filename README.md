@@ -76,6 +76,8 @@ fill-array - This example fills a byte array with the specified number or random
 
 one-sym-string - Generate one symbol string (For and StringBuilder)
 
-add-leader-zero - Add leader zero's to string representation of a number
+add-leader-zero - Add leader zero's to string representation of a number (not optimal solution)
 
 add-leader-zero-writeline - Add leader zero's to string representation of a number in Console.WriteLine function
+
+add-leader-zero-string-format - Add leader zero's to string representation of a number with String.Format function
