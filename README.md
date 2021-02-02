@@ -81,3 +81,5 @@ add-leader-zero - Add leader zero's to string representation of a number (not op
 add-leader-zero-writeline - Add leader zero's to string representation of a number in Console.WriteLine function
 
 add-leader-zero-string-format - Add leader zero's to string representation of a number with String.Format function
+
+kmg2bytes-example - kilo-, mega-, giga- bytes to bytes convert example
