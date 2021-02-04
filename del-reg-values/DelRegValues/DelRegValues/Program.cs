@@ -15,7 +15,7 @@ namespace DelRegValues
             try
             {
 
-                key = Registry.CurrentUser.OpenSubKey(subkey,true);
+                key = Registry.CurrentUser.OpenSubKey(subkey, true);
 
                 foreach (string valname in key.GetValueNames())
                 {
