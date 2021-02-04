@@ -85,3 +85,5 @@ add-leader-zero-string-format - Add leader zero's to string representation of a 
 kmg2bytes-example - kilo-, mega-, giga- bytes to bytes convert example
 
 files-generator - generate specified number of files with specified size and byte pattern
+
+del-reg-values - delete Registry values in Registry subkey
