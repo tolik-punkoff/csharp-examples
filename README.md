@@ -89,3 +89,5 @@ files-generator - generate specified number of files with specified size and byt
 del-reg-values - delete Registry values in Registry subkey
 
 find-files-by-mask - find files by file mask and fix bug Directory.GetFiles()
+
+key-test - example for KeyUp, KeyDown and KeyPress
