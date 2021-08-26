@@ -91,3 +91,5 @@ del-reg-values - delete Registry values in Registry subkey
 find-files-by-mask - find files by file mask and fix bug Directory.GetFiles()
 
 key-test - example for KeyUp, KeyDown and KeyPress
+
+write-to-stderr - console application write message to STDERR example
