@@ -97,3 +97,5 @@ write-to-stderr - console application write message to STDERR example
 translit-example - convert russian letters in phonetic latin writing
 
 console-color-demo - set console text and background color example
+
+c-k-f-converter - Celsius-Kelvin-Farengeit temperature converter
